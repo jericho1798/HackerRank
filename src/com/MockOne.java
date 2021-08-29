@@ -9,16 +9,19 @@ import java.util.List;
 /**
  * 1) Finds median
  * 2) Matrix
+ * 3) Truck tour
  */
 public class MockOne implements Task {
     @Override
     public void action() {
-
-       /* List<Integer> arr = Arrays.asList(0,0,2,4,6,5,3);
+       /*
+//1)
+        List<Integer> arr = Arrays.asList(0,0,2,4,6,5,3);
         Collections.sort(arr);
         System.out.println(arr);
         System.out.println(arr.get((arr.size())/2));*/
-        List<List<Integer>> arr = new ArrayList<>();
+//2)
+     /*   List<List<Integer>> arr = new ArrayList<>();
         List<Integer> a = Arrays.asList(112, 42, 83, 119);
         List<Integer> b = Arrays.asList(56, 125, 56, 49);
         List<Integer> c = Arrays.asList(15, 78, 101, 43);
@@ -37,10 +40,10 @@ public class MockOne implements Task {
         for (int i = 0; i < arr.size() / 2; i++) {
             List<Integer> test = new ArrayList<>();
             for (int j = 0; j < arr.size() / 2; j++) {
-                int[] mas = new int[] {arr.get(i).get(j), arr.get(arr.size() - i - 1).get(j), arr.get(i).get(arr.size() - j - 1), arr.get(arr.size() - i - 1).get(arr.size() - j - 1)};
+                int[] mas = new int[]{arr.get(i).get(j), arr.get(arr.size() - i - 1).get(j), arr.get(i).get(arr.size() - j - 1), arr.get(arr.size() - i - 1).get(arr.size() - j - 1)};
 
                 test.clear();
-                for(int k = 0; k < mas.length; k++) {
+                for (int k = 0; k < mas.length; k++) {
                     System.out.println(k + ": " + mas[k]);
                     test.add(mas[k]);
                 }
@@ -52,8 +55,25 @@ public class MockOne implements Task {
                 System.out.println(test.size());
             }
         }
-        System.out.println(sum);
+        System.out.println(sum);*/
+//3)
+        List<List<Integer>> petrolPumps = new ArrayList<>();
+        petrolPumps.add(Arrays.asList(1, 5));
+        petrolPumps.add(Arrays.asList(10, 3));
+        petrolPumps.add(Arrays.asList(3, 4));
+        int sum = 0;
+        int start = 0;
+        for (int i = 0; i < petrolPumps.size(); i++) {
+            int full = petrolPumps.get(i).get(0);
+            int range = petrolPumps.get(i).get(1);
+            sum += full - range;
 
+            if (sum < 0) {
+                sum = 0;
+                start = i + 1;
+            }
+        }
+        System.out.println(start);
     }
 
 }

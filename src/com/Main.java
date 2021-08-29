@@ -7,7 +7,7 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-       MockOne mockOne = new MockOne();
-       mockOne.action();
+        MockOne mockOne = new MockOne();
+        mockOne.action();
     }
 }
