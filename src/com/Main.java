@@ -1,13 +1,11 @@
 package com;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.io.IOException;
+
 
 public class Main {
-
-    public static void main(String[] args) {
-        MockOne mockOne = new MockOne();
-        mockOne.action();
+    public static void main(String[] args) throws IOException {
+        balancedBrackets bB = new balancedBrackets();
+        bB.action();
     }
 }
