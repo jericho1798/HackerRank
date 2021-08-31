@@ -5,8 +5,8 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        balancedBrackets bB = new balancedBrackets();
-        bB.action();
+        simpleTextEditor simpleTextEditor = new simpleTextEditor();
+        simpleTextEditor.action();
 
     }
 }
