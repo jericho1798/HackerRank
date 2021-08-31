@@ -6,6 +6,7 @@ import java.util.Stack;
 public class simpleTextEditor implements Task {
     private static final Scanner scanner = new Scanner(System.in);
     private static StringBuilder S = new StringBuilder("");
+    private static StringBuilder out = new StringBuilder("");
     private static Stack<String> stack = new Stack<>();
 
     static void append(String W) {
@@ -17,7 +18,9 @@ public class simpleTextEditor implements Task {
     }
 
     static void print(int k) {
-        System.out.println(S.charAt(k - 1));
+        out.append(S.charAt(k - 1));
+        out.append("\n");
+        //System.out.println(S.charAt(k - 1));
     }
 
     static void undo() {
@@ -34,6 +37,7 @@ public class simpleTextEditor implements Task {
             func(c);
         }
         scanner.close();
+        System.out.println(out);
     }
 
     static void func(String[] c) {
