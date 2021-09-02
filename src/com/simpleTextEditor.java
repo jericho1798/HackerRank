@@ -20,7 +20,6 @@ public class simpleTextEditor implements Task {
     static void print(int k) {
         out.append(S.charAt(k - 1));
         out.append("\n");
-        //System.out.println(S.charAt(k - 1));
     }
 
     static void undo() {
