@@ -5,8 +5,7 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        legoBlocks legoBlocks = new legoBlocks();
-        legoBlocks.action();
-
+        Cookies c = new Cookies();
+        c.action();
     }
 }
